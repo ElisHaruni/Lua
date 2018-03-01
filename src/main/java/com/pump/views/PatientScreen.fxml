@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1311.0" prefWidth="1993.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <right>
+      <VBox alignment="CENTER" cacheHint="SCALE" prefHeight="1222.0" prefWidth="407.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button graphicTextGap="10.0" mnemonicParsing="false" prefHeight="253.0" prefWidth="407.0" style="-fx-background-color: red;" text="Power" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="40.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../resources/power-64.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button graphicTextGap="10.0" mnemonicParsing="false" prefHeight="253.0" prefWidth="407.0" style="-fx-background-color: orange;" text="Exerices" textFill="WHITE">
+               <font>
+                  <Font size="40.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../resources/weightlift-64.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button graphicTextGap="10.0" mnemonicParsing="false" prefHeight="253.0" prefWidth="407.0" style="-fx-background-color: #02b7a9;" text="Meal" textFill="WHITE">
+               <font>
+                  <Font size="42.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../resources/restaurant-3-64.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button graphicTextGap="10.0" mnemonicParsing="false" prefHeight="253.0" prefWidth="407.0" style="-fx-background-color: Green;" text="Simulation" textFill="WHITE">
+               <font>
+                  <Font size="42.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../resources/graph-64.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button graphicTextGap="10.0" mnemonicParsing="false" prefHeight="253.0" prefWidth="407.0" style="-fx-background-color: #EC008C;" text="Fill Insulin" textFill="WHITE">
+               <font>
+                  <Font size="42.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../resources/empty-filter-64.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button graphicTextGap="10.0" mnemonicParsing="false" prefHeight="253.0" prefWidth="407.0" style="-fx-background-color: #0F6CB6;" text="Fill Glucogon" textFill="WHITE">
+               <font>
+                  <Font size="40.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../resources/empty-filter-64.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </VBox>
+   </right>
+   <center>
+      <Pane prefHeight="1222.0" prefWidth="1469.0" BorderPane.alignment="CENTER">
+         <children>
+            <CheckBox layoutX="1175.0" layoutY="928.0" mnemonicParsing="false" text="Manual" />
+            <CheckBox layoutX="1185.0" layoutY="1015.0" mnemonicParsing="false" text="Auto" />
+            <ProgressBar layoutX="700.0" layoutY="994.0" prefHeight="87.0" prefWidth="200.0" progress="0.0" />
+            <ProgressIndicator layoutX="919.0" layoutY="994.0" prefHeight="87.0" prefWidth="60.0" progress="0.0" />
+            <ProgressIndicator layoutX="448.0" layoutY="992.0" prefHeight="87.0" prefWidth="60.0" progress="0.0" />
+            <ProgressBar layoutX="236.0" layoutY="992.0" prefHeight="87.0" prefWidth="200.0" progress="0.0" />
+            <Button graphicTextGap="10.0" layoutX="700.0" layoutY="903.0" mnemonicParsing="false" style="-fx-background-color: #0F6CB6;" text="Pump Glucogon" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../resources/syringe-64.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button graphicTextGap="10.0" layoutX="236.0" layoutY="901.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="254.0" style="-fx-background-color: #EC008C;" text="Pump Insulin" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../resources/syringe-64.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <LineChart layoutX="58.0" layoutY="200.0" prefHeight="669.0" prefWidth="1367.0">
+               <xAxis>
+                  <CategoryAxis side="BOTTOM" />
+               </xAxis>
+               <yAxis>
+                  <NumberAxis side="LEFT" />
+               </yAxis>
+            </LineChart>
+            <Button graphicTextGap="10.0" layoutX="1255.0" layoutY="75.0" mnemonicParsing="false" style="-fx-background-color: black;" text="Config" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../resources/gear-2-64.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+         </children>
+      </Pane>
+   </center>
+   <left>
+      <VBox prefHeight="1146.0" prefWidth="104.0" style="-fx-background-color: #0F6CB6;" BorderPane.alignment="CENTER" />
+   </left>
+   <bottom>
+      <AnchorPane prefHeight="100.0" prefWidth="1909.0" style="-fx-background-color: red;" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>

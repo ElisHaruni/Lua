@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pump.controllers.PatientController">
+  <children>
+    <SplitPane dividerPositions="0.8295739348370927" prefHeight="700.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <items>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="227.0" prefWidth="85.0">
+          <children>
+            <GridPane prefHeight="557.0" prefWidth="644.0" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="1.0">
+              <children>
+                <AnchorPane prefHeight="335.0" prefWidth="159.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <children>
+                    <Label prefHeight="20.0" prefWidth="88.0" text="Previous BGL:" AnchorPane.rightAnchor="86.0" AnchorPane.topAnchor="60.0">
+                      <font>
+                        <Font size="14.0" fx:id="x1" />
+                      </font>
+                    </Label>
+                    <Label font="$x1" layoutX="24.0" layoutY="94.0" prefHeight="20.0" prefWidth="88.0" text="Current BGL:" />
+                    <Label fx:id="lblSugarBefore" layoutX="120.0" layoutY="60.0" prefHeight="20.0" prefWidth="59.0" style="-fx-background-color: green;" text="100" textFill="#fcf5f5">
+                      <font>
+                        <Font name="System Bold" size="14.0" fx:id="x2" />
+                      </font>
+                    </Label>
+                    <Label fx:id="lblSugarNow" font="$x2" layoutX="120.0" layoutY="94.0" prefHeight="20.0" prefWidth="59.0" style="-fx-background-color: green;" text="100" textFill="#f8f5f5" />
+                    <Button fx:id="btnInjectInsuline" font="$x1" layoutX="24.0" layoutY="155.0" mnemonicParsing="false" onAction="#injectInsuline" prefHeight="37.0" prefWidth="147.0" text="Inject Insuline" />
+                    <Button fx:id="btnInjectGlucagon" font="$x1" layoutX="24.0" layoutY="215.0" mnemonicParsing="false" onAction="#injectGlucagon" prefHeight="37.0" prefWidth="147.0" text="Inject Glucagon" />
+                  </children>
+                </AnchorPane>
+                <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                  <children>
+                    <ProgressBar fx:id="progInsulineRes" layoutX="34.0" layoutY="32.0" prefHeight="15.0" prefWidth="200.0" progress="0.0" />
+                    <ProgressBar fx:id="progGlucagonRes" layoutX="34.0" layoutY="73.0" prefHeight="15.0" prefWidth="200.0" progress="0.0" />
+                    <Label layoutX="43.0" layoutY="14.0" text="Insuline" />
+                    <Label layoutX="43.0" layoutY="51.0" text="Glucagon" />
+                    <Button fx:id="btnSOS" cancelButton="false" defaultButton="true" layoutX="332.0" layoutY="44.0" mnemonicParsing="false" onAction="#sendSOSAlarm" prefHeight="37.0" prefWidth="88.0" text="SOS" textAlignment="LEFT" textFill="WHITE">
+                      <effect>
+                        <DropShadow />
+                      </effect>
+                      <font>
+                        <Font name="System Bold" size="20.0" />
+                      </font>
+                    </Button>
+                  </children>
+                </AnchorPane>
+                <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                  <children>
+                    <Button fx:id="btnMaualMode" layoutX="14.0" layoutY="28.0" mnemonicParsing="false" onAction="#changeToManualMode" prefHeight="31.0" prefWidth="76.0" text="Manual" />
+                    <Button fx:id="btnAutomaticMode" layoutX="98.0" layoutY="28.0" mnemonicParsing="false" onAction="#changeToAutomaticMode" prefHeight="31.0" prefWidth="76.0" text="Automatic" />
+                  </children>
+                </AnchorPane>
+                        <Button fx:id="btnhistory" mnemonicParsing="false" onAction="#showHstory" prefHeight="32.0" prefWidth="111.0" text="Show History" />
+                        <AnchorPane fx:id="graphAnchorPane" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1" />
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                           <children>
+                      <Button fx:id="btnDocMode" alignment="CENTER" contentDisplay="TOP" layoutX="14.0" layoutY="14.0" maxHeight="-1.0" maxWidth="-1.0" mnemonicParsing="false" onAction="#login" prefHeight="31.0" prefWidth="88.0" style="-fx-background-color: grey;" text="Configure" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+                        <font>
+                          <Font name="System Bold" size="12.0" />
+                        </font>
+                      </Button>
+                              <Label fx:id="txtAlarms" layoutX="14.0" layoutY="56.0" prefHeight="84.0" prefWidth="163.0" style="-fx-background-color: red;" text="Alarms" />
+                           </children>
+                        </AnchorPane>
+              </children>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="484.0" minWidth="10.0" prefWidth="484.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="336.0" minWidth="10.0" prefWidth="198.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="195.0" minHeight="10.0" prefHeight="145.0" vgrow="ALWAYS" />
+                <RowConstraints maxHeight="344.0" minHeight="10.0" prefHeight="335.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="335.0" minHeight="10.0" prefHeight="118.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+                  <Label fx:id="lblInsulinCount" layoutX="400.0" layoutY="40.0" prefHeight="20.0" prefWidth="32.0" style="-fx-background-color: Black;" text="100" textFill="#fcf5f5">
+                     <font>
+                        <Font name="System Bold" size="14.0" fx:id="x21" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblGlucagonCount" font="$x2" layoutX="400.0" layoutY="80.0" prefHeight="20.0" prefWidth="32.0" style="-fx-background-color: blue;" text="100" textFill="#f8f5f5" />
+                  <Label layoutX="255.0" layoutY="40.0" prefHeight="20.0" prefWidth="133.0" text="Injected Insulin Units">
+                     <font>
+                        <Font size="14.0" fx:id="x11" />
+                     </font>
+                  </Label>
+                  <Label layoutX="232.0" layoutY="80.0" prefHeight="20.0" prefWidth="156.0" text="Injected Glucagon Units">
+                     <font>
+                        <Font size="14.0" fx:id="x111" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lbltime" layoutX="5.0" layoutY="2.0" prefHeight="20.0" prefWidth="82.0" style="-fx-background-color: Black;" text="9:03:45 PM" textFill="#f8f4f4">
+                     <font>
+                        <Font name="System Bold" size="14.0" fx:id="x211" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lbldate" layoutX="96.0" layoutY="2.0" prefHeight="20.0" prefWidth="88.0" style="-fx-background-color: Black;" text="29/01/2018" textFill="#f8f4f4">
+                     <font>
+                        <Font name="System Bold" size="14.0" fx:id="x2111" />
+                     </font>
+                  </Label>
+          </children>
+        </AnchorPane>
+        <AnchorPane disable="false" minHeight="0.0" minWidth="0.0" prefHeight="598.0" prefWidth="108.0">
+          <children>
+            <Button fx:id="btnStartSimulation" layoutX="7.0" layoutY="141.0" mnemonicParsing="false" onAction="#startSimulation" prefHeight="37.0" prefWidth="114.0" text="Start Simulation" />
+            <Button fx:id="btnEat50Cbh" layoutX="7.0" layoutY="221.0" mnemonicParsing="false" onAction="#eat50cbh" prefHeight="37.0" prefWidth="114.0" text="EAT 50CBH" />
+            <Button fx:id="btnStopSimulation" layoutX="7.0" layoutY="181.0" mnemonicParsing="false" onAction="#stopSimulation" prefHeight="37.0" prefWidth="114.0" text="Stop Simulation" />
+            <Button fx:id="btnFillInsulineReservoir" layoutX="7.0" layoutY="261.0" mnemonicParsing="false" onAction="#fillInsulineReservoir" prefHeight="37.0" prefWidth="114.0" text="Refill Insuline R" />
+            <Button fx:id="btnFillGliuacgonReservoir" layoutX="7.0" layoutY="301.0" mnemonicParsing="false" onAction="#fillGliuacgonReservoir" prefHeight="37.0" prefWidth="114.0" text="Refill Glucagon R" />
+            <Button fx:id="btnDosport" layoutX="6.0" layoutY="341.0" mnemonicParsing="false" onAction="#doingSports" prefHeight="37.0" prefWidth="114.0" text="Do Sport" />
+          </children>
+        </AnchorPane>
+      </items>
+    </SplitPane>
+  </children>
+</AnchorPane>

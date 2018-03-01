@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="296.0" prefWidth="272.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pump.controllers.LoginController">
+   <children>
+      <Text layoutX="39.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" />
+      <Text layoutX="39.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" wrappingWidth="60.13671875" />
+      <TextField fx:id="txtUsername" layoutX="99.0" layoutY="88.0" />
+      <TextField fx:id="txtPassword" layoutX="99.0" layoutY="131.0" />
+      <Label fx:id="lblmsg" alignment="CENTER" ellipsisString="" layoutX="21.0" layoutY="51.0" prefHeight="31.0" prefWidth="252.0" text="Enter username and password to login " AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+      <Button fx:id="btnLogin" layoutX="174.0" layoutY="193.0" mnemonicParsing="false" onAction="#Login" text="Login" />
+   </children>
+</AnchorPane>

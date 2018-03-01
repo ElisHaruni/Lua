@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pump.controllers.DoctorController">
+   <children>
+      <Label fx:id="lblFirstName" layoutX="31.0" layoutY="55.0" prefHeight="20.0" prefWidth="160.0" text="First Name">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="txtFirstName" layoutX="203.0" layoutY="55.0" onInputMethodTextChanged="#Text" prefHeight="20.0" prefWidth="150.0">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </TextArea>
+      <Label fx:id="lblLastname" layoutX="30.0" layoutY="85.0" prefHeight="20.0" prefWidth="160.0" text="Last Name">
+         <font>
+            <Font size="12.0" />
+         </font></Label>
+      <TextArea fx:id="txtLastname" layoutX="202.0" layoutY="85.0" prefHeight="20.0" prefWidth="150.0">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </TextArea>
+      <Label fx:id="lblAge" layoutX="30.0" layoutY="115.0" prefHeight="20.0" prefWidth="160.0" text="Age">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="txtAge" layoutX="202.0" layoutY="115.0" prefHeight="20.0" prefWidth="150.0">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </TextArea>
+      <Label fx:id="lblSex" layoutX="30.0" layoutY="145.0" prefHeight="20.0" prefWidth="160.0" text="Sex">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="txtSex" layoutX="202.0" layoutY="145.0" prefHeight="20.0" prefWidth="150.0">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </TextArea>
+      <Label fx:id="lblHeight" layoutX="30.0" layoutY="175.0" prefHeight="20.0" prefWidth="160.0" text="Weight">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="txtWeight" layoutX="202.0" layoutY="175.0" prefHeight="20.0" prefWidth="150.0">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </TextArea>
+      <Label fx:id="lblDigetionRate" layoutX="30.0" layoutY="205.0" prefHeight="20.0" prefWidth="160.0" text="Digestion rate">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="txtDigestionRate" layoutX="202.0" layoutY="205.0" prefHeight="20.0" prefWidth="150.0">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </TextArea>
+      <Label fx:id="lblInsulinRate" layoutX="30.0" layoutY="235.0" prefHeight="20.0" prefWidth="160.0" text="Insulin Injection rate">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="txtInsulin" layoutX="202.0" layoutY="235.0" prefHeight="20.0" prefWidth="150.0">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </TextArea>
+      <Label fx:id="lblGlucagon" layoutX="30.0" layoutY="265.0" prefHeight="20.0" prefWidth="160.0" text="Glucagon Injection rate">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="txtGlucagon" layoutX="202.0" layoutY="265.0" prefHeight="20.0" prefWidth="150.0">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </TextArea>
+      <Label fx:id="lblEmergency" layoutX="30.0" layoutY="295.0" prefHeight="20.0" prefWidth="160.0" text="Emergency Contact">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="txtEmergency" layoutX="202.0" layoutY="295.0" prefHeight="20.0" prefWidth="150.0">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </TextArea>
+      <Label fx:id="lblBGL" layoutX="30.0" layoutY="350.0" prefHeight="20.0" prefWidth="160.0" text="Recommended BGL limit">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="txtBGL" layoutX="202.0" layoutY="350.0" prefHeight="20.0" prefWidth="94.0">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </TextArea>
+      <Label fx:id="lblMaxInsulin" layoutX="30.0" layoutY="380.0" prefHeight="20.0" prefWidth="160.0" text="Max. Insulin Units/Day">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="txtMaxInsulin" layoutX="202.0" layoutY="380.0" prefHeight="20.0" prefWidth="94.0">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </TextArea>
+      <Label fx:id="lblMaxGlucagon" layoutX="30.0" layoutY="410.0" prefHeight="20.0" prefWidth="160.0" text="Max. Glucagon Units/Day">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="txtMaxGlucagon" layoutX="202.0" layoutY="410.0" prefHeight="20.0" prefWidth="94.0">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </TextArea>
+      <Label fx:id="lblPassword" layoutX="421.0" layoutY="380.0" prefHeight="20.0" prefWidth="122.0" text="Password Settings">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="txtPassword" layoutX="552.0" layoutY="380.0" prefHeight="20.0" prefWidth="216.0" />
+      <Label fx:id="lblmedicine" layoutX="421.0" layoutY="410.0" prefHeight="20.0" prefWidth="122.0" text="Recommended med.  ">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="txtMedicine" layoutX="552.0" layoutY="410.0" prefHeight="20.0" prefWidth="216.0">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </TextArea>
+      <Label fx:id="lblModeSelection" layoutX="30.0" layoutY="450.0" prefHeight="20.0" prefWidth="94.0" text="Mode Selection">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="chkAutoOnly" layoutX="202.0" layoutY="450.0" mnemonicParsing="false" onAction="#handleAutoOnly" text="Auto Only" />
+      <CheckBox fx:id="chkManualOnly" layoutX="283.0" layoutY="450.0" mnemonicParsing="false" onAction="#handleManualOnly" text="Manual only" />
+      <CheckBox fx:id="chkAutoManual" layoutX="380.0" layoutY="450.0" mnemonicParsing="false" onAction="#handlechkAutoManual" text="Auto/Manual" />
+      <Button fx:id="btnLogout" layoutX="711.0" layoutY="14.0" mnemonicParsing="false" onAction="#logout" text="Logout" />
+      <Button fx:id="btnSave" layoutX="631.0" layoutY="450.0" mnemonicParsing="false" onAction="#save" prefHeight="22.0" prefWidth="50.0" text="Save" />
+      <Button fx:id="btnCancle" layoutX="699.0" layoutY="450.0" mnemonicParsing="false" onAction="#cancle" prefHeight="25.0" prefWidth="61.0" text="Cancle" />
+      <Button fx:id="btnHist" layoutX="681.0" layoutY="89.0" mnemonicParsing="false" onAction="#getHistory" text="Historical data" />
+   </children>
+</AnchorPane>
